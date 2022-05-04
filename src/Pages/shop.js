@@ -1,7 +1,6 @@
 import React, {useEffect, useContext} from 'react'
 import ProductCard from '../Components/Cards/ProductCard';
 import Layout from '../Components/Layout';
-import { CartContext } from '../Context/CartContext';
 import {
   getProducts,
   
@@ -27,7 +26,7 @@ function Shop() {
       
       <div className='products container'>
         {products?.drinks?.length > 0 ? <> {products?.drinks?.map((product, index) => (
-          <ProductCard  _product={product}/>
+          <ProductCard data-testid='product-area'   _product={product}/>
 
         ))}</> : "Loading..." }
        

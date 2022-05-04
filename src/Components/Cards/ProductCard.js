@@ -15,7 +15,6 @@ function ProductCard({_product}) {
 
   const [product, setProduct] = useState({});
   
-  // const [added, setAdded] = useState(false);
 
   const InCart = (product) => {
 
@@ -60,7 +59,7 @@ function ProductCard({_product}) {
             <img
               className=""
               src={product.strDrinkThumb}
-              alt={product.title}
+              alt='product-thumbnail'
               loading="lazy"
             />
           ) : (
@@ -89,7 +88,7 @@ function ProductCard({_product}) {
         <div
           className={``}
         >
-          <div className=" button-area  ">
+          <div  data-testid="btns" className=" button-area  ">
             <button
               onClick={() => {
                 decrease(product);

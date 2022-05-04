@@ -8,6 +8,7 @@ it ('should render the home page', async () => {
 
  const {container } =  render(
   <CartContextProvider>
+    
   <App />
 
   </CartContextProvider>
@@ -20,6 +21,6 @@ it ('should render the home page', async () => {
 
   expect(container.innerHTML).toMatch('Welcome to my Cocktail App')
 
-  
+
 })
 
