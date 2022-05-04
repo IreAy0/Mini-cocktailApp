@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { FiShoppingCart } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { CartContext } from '../../Context/CartContext';
 
 function Header() {
@@ -12,23 +12,23 @@ function Header() {
   >
     <nav data-testid="navbar" className="container  ">
       
-        <Link data-testid="home-link" to="/">
+        <a data-testid="home-link" href="/">
           
             Logo
          
-        </Link>
+        </a>
        
         <ul>
           <li>
-          <Link data-testid="shop-link" to={"/shop"} >
+          <a data-testid="shop-link" href={"/shop"} >
             
             Shop
            
-        </Link>
+        </a>
           </li>
          
           <li>  
-            <Link to="/cart"  className="cart-icon relative inline-block">
+            <a href="/cart"  className="cart-icon relative inline-block">
            
              
                 <FiShoppingCart className="icons"/>
@@ -45,7 +45,7 @@ function Header() {
                 
              
            
-          </Link></li>
+          </a></li>
           
           
         
