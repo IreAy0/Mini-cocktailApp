@@ -118,6 +118,7 @@ function ProductCard({_product}) {
           className={` button-area`}
         >
           <button
+            type='button'
             data-testid="add-to-cart"
             onClick={() => {
               addProduct(product);
