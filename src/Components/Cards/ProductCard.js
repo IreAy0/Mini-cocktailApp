@@ -1,5 +1,5 @@
-import React, {useContext, useEffect, useReducer, useState} from 'react'
-import { Link } from 'react-router-dom';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useContext, useEffect, useState} from 'react'
 import { CartContext } from '../../Context/CartContext';
 
 
@@ -8,7 +8,6 @@ function ProductCard({_product}) {
     addProduct,
     cartItems,
     increase,
-    item,
     removeProduct,
     decrease,
   } = useContext(CartContext);
@@ -36,7 +35,8 @@ function ProductCard({_product}) {
 
   useEffect(() => {
     remove(product)
-}, [Item?.quantity])
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, [Item?.quantity, ])
 
   useEffect(() => {
     let max = 5000

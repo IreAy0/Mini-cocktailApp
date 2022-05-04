@@ -30,7 +30,7 @@ export const CartReducer = (state, action) => {
         ...state,
         item: action.payload,
         ...sumItems(state.cartItems),
-        // cartItems: [...state.cartItems]
+        cartItems: [...state.cartItems]
       };
     case "REMOVE_ITEM":
       return {

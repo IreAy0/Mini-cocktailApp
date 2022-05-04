@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import Layout from '../Components/Layout'
 import { CartContext } from '../Context/CartContext';
 
@@ -6,14 +6,8 @@ function Cart() {
   const { cartItems,checkout, removeProduct, total, increase, decrease, handleCheckout } =
   useContext(CartContext);
  
-const [alertAdd, setAlertAdd] = useState(false);
 console.log(cartItems);
-useEffect(() => {
-  const interval = setInterval(() => {
-    setAlertAdd(false);
-  }, 5000);
-  return () => clearInterval(interval);
-}, []);
+
 const subTotal = (qty, price) => {
   let total = Math.round((qty * price).toFixed(2));
   return total;
